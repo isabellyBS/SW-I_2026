@@ -1,0 +1,77 @@
+*{
+    margin: 70;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.grupo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+
+.grupo-form input,
+.grupo-form select,
+.grupo-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  margin-top: 8px;
+}
+
+.grupo-form input[type="checkbox"],
+.grupo-form input[type="radio"] {
+  margin-right: 8px;
+  margin-top: 0;
+}
+
+.grupo-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.centraliza{
+    text-align: center;
+}
+
+.formulario{
+    margin-left: 150px;
+    margin-right: 150px; 
+    border-radius: 13px;
+    background-color: #688a65;
+    border-style: double;
+    border-color: #03484c;
+    border-width: 8px;
+    padding: 20px;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #688a65;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: aliceblue;
+    transform: scale(1.05);
+}
+
+.btnSoma{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #65798a;
+    color: rgb(255, 240, 255);
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

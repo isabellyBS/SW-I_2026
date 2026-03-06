@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="JS/script.js"></script>
+    <link rel="stylesheet" href="CSS/estlo.css">
+</head>
+<body>
+    <div class="formulario">
+        <div class="grupo-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="InputNome" name="nome" required>
+        </div>
+
+          <div class="grupo-form">
+            <label for="email">E-mail:</label>
+            <input type="email" id="InputEmail" name="email" required>
+          </div>
+
+          <div class="grupo-form">
+            <label for="idade">CPF:</label>
+            <input type="number" id="InputCpf" name="cpf" min="10000000000" required>
+          </div>
+
+         <div class="grupo-form">
+           <label for="mensagem">Endereço: </label>
+           <textarea id="mensagem" name="InputEndereco" rows="3" required></textarea>
+         </div>
+    </div>
+    <div class="grupo-form centraliza">
+        <button onclick="soma()" class="btnSoma">Aparecer alerta.</button>
+        <button type="submit" class="btn">Enviar</button>
+    </div>
+</body>
+</html>
