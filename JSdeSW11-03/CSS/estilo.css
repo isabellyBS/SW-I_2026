@@ -1,0 +1,28 @@
+body{
+    background-color: #f9f1a5;
+    /* display: flex;
+    justify-content: center; /* Centraliza horizontalmente 
+    align-items: center;     /* Centraliza verticalmente 
+    height: 100vh;           Define altura total da tela (necessário) */
+    color: #ce5ea1;
+}
+
+hr {
+    border: none;                /* Remove o estilo padrão */
+    background-color: #333;     /* Cor da linha */
+    height: 2px;                /* Espessura da linha */
+    width: 50%;                 /* Largura (opcional) */
+    margin: 20px auto;          /* Centraliza e dá espaçamento */
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /*center; /* Centraliza horizontalmente 
+    align-items: center;     /* Centraliza verticalmente 
+    height: 10vh;           /* Define altura total da tela (necessário) */
+}
