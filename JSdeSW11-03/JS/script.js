@@ -22,4 +22,17 @@ function IMC() {
     var imc = peso / (altura**2)
 
     document.getElementById("Rimc").innerText="Seu IMC: "+ imc;
+    if(imc < 18.5){
+        document.getElementById("Cimc").innerText="Classificado como: Abaixo do peso";
+    }   else if(imc < 25){
+        document.getElementById("Cimc").innerText="Classificado como: Peso normal";
+    }   else if(imc < 30){
+        document.getElementById("Cimc").innerText="Classificado como: Sobrepeso";
+    }   else if(imc < 35){
+        document.getElementById("Cimc").innerText="Classificado como: Obesidade grau 1";
+    }   else if(imc < 40){
+        document.getElementById("Cimc").innerText="Classificado como: Obesidade grau 2";
+    }   else{
+        document.getElementById("Cimc").innerText="Classificado como: Obesidade grau 3";
+    }
 }

@@ -26,3 +26,14 @@ hr {
     align-items: center;     /* Centraliza verticalmente 
     height: 10vh;           /* Define altura total da tela (necessário) */
 }
+
+.containerzinho{
+    background-color: #e68dc2;
+    color: #f9f1a5;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #c7be6e;
+}
