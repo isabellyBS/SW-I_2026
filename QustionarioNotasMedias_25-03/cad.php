@@ -15,14 +15,18 @@
        // $M3 = uniqid(MencaoTres);
        // $media = 0;
         //$media = (($_POST["MencaoUm"] + $_POST["MencaoDois"] + $_POST["MencaoTres"])/3);
+//function Media{
 
-        //function Media{
-        
+        //o entre [] é para pegar o valor do input, pelo nome (ñ pelo id)
         $_m1 = $_POST["MencaoUm"];
         $_m2 = $_POST["MencaoDois"];
         $_m3 = $_POST["MencaoTres"];
         $_media= (($_m1+$_m2+$_m3)/3);
-        echo "<p>$_media</p>"
+
+        $nome = $_POST["nome"];
+        $sobrenome = $_POST["sobrenome"];
+        echo "<p>É um prazer te conhecer $nome $sobrenome!</p>";
+        echo "<p>Sua média é de: $_media</p>";
 
         // }
         // echo $MSG;
