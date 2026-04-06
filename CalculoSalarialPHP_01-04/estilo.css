@@ -1,0 +1,55 @@
+body{
+    background-color: #9ff0aa;
+}
+
+p{
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #507a46;
+    line-height: 0.5;
+    padding: 4, 20, 1;
+}
+
+h1{
+    color: #507a46;
+}
+
+.container{
+    width: 400px;
+    margin: 0 auto;
+    background-color: #cbfcd9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.php{
+    padding: 20px;
+    width: 500px;
+    margin-top: 70px;
+}
+.php p{
+    line-height: 1.5;
+    color: #457439;
+}
+
+.centraliza{
+    text-align: center;
+}
+
+.btn {
+    background-color: #507a46d2;
+    color: white;
+    font-size: 1em;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-caixa{
+    padding: 4px;
+    border: 1px solid #507a46;
+    border-radius: 8px;
+    background-color: #ffffff98;
+}

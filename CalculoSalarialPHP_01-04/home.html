@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Salarial PHP</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="centraliza">
+        <h1>Calculadora de Salário Líquido</h1>
+    </div>
+    <div class="container">
+        <form action="CalculadorSalario.php" method="post">
+            <p>Seu nome: </p>
+            <div>
+                <input class="form-caixa" type="text" id="nome" name="nome" required>
+            </div>
+            <br>
+            <p>Seu salário (em reais): </p>
+            <div>
+                <input class="form-caixa" type="number" id="salario" name="salario" min="1621" step="0.01" required>
+            </div>
+            <br>
+            <p>Falta/s: </p>
+            <div>
+                <input class="form-caixa" type="number" id="Faltas" name="Faltas" value="0" min="0" max="30" step="1" required>
+            </div>
+            <br>
+            <p>Tem vale-transporte?</p>
+            <div>
+                <input type="radio" name="valeTransporte" value=true required>Sim
+                <input type="radio" name="valeTransporte" value=false required>Não
+            </div>
+            <br>
+            <br>
+        
+            <div>
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- Pesquisando, achei isso:
+ 
+  placeholder="123-45-678"         // é só um exemplo
+
+  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"        //formatação do input, no caso, 3 números de 0 até 9, hifen, 2 números de 0 até 9, hifen, 3 números de 0 até 9, tal como no exemplo
+  
+  
+  -->
