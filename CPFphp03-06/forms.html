@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica CPF PHP</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="centraliza">
+        <h1>Verificador de CPF</h1>
+    </div>
+    <div class="container">
+        <form action="VerificaCPF.php" method="post">
+            <p>CPF: </p>
+            <div>
+                <input class="form-caixa" type="text" name="CPF" placeholder="123.456.789-10" minlength="11" required>
+            </div>
+            <br>
+            <br>
+        
+            <div>
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<!--pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+
+só aceita se for nessa "formatação"
+  -->
