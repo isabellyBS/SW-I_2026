@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifica CPF PHP</title>
+    <link rel="shortcut icon" href="iconCPF.png" type="image/x-icon">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -12,8 +13,12 @@
     </div>
     <div class="container">
         <form action="VerificaCPF.php" method="post">
+            <p>Nome:</p>
+            <div class="caixa">
+                <input class="form-caixa" type="text" name="nome" placeholder="Seu nome" required>
+            </div>
             <p>CPF: </p>
-            <div>
+            <div class="caixa">
                 <input class="form-caixa" type="text" name="CPF" placeholder="123.456.789-10" minlength="11" required>
             </div>
             <br>

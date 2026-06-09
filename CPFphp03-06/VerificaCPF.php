@@ -4,27 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado do CPF</title>
+    <link rel="shortcut icon" href="iconCPF.png" type="image/x-icon">
     <link rel="stylesheet" href="estilo.css">
 
  </head>
  <body>
      <main>
-    <?php
-        //o entre [] é para pegar o valor do input, pelo nome (ñ pelo id)
-        $CPF = $_POST["CPF"];
+        <?php
+            //o entre [] é para pegar o valor do input, pelo nome (ñ pelo id)
+            $nome = $_POST["nome"];
+            $cpf = $_POST["CPF"];
+            $CPF = preg_replace("/[^0-9]/", "", $cpf); // deixa só os nº
 
-        $Resultado = true
+            $digitosCPF = str_split($CPF); // separa os números do CPF em um array
 
-        if ($Resultado === true) {
-            $Resultado = "verdadeiro"
-        } else {
-            $Resultado = "falso"
-        }
+            for ($i=0; $i < 9; $i++) { 
+                $ValorPraSoma = $digitosCPF[$i] * (10 - $i); // pega o número do CPF e * pelo n°
+                $Soma += $ValorPraSoma; // soma o resultado
+            }
+
+            $Resto = $Soma % 11; // pega o resto da divisão da $Soma por 11
+
+            #O que tem q faze agr peguei do https://www.campuscode.com.br/conteudos/o-calculo-do-digito-verificador-do-cpf-e-do-cnpj (pois não compreendi direito pelo slide)
+            $Digito1 = 11 - $Resto; 
+            if ($Digito1 >= 10) { 
+                $Digito1 = 0;
+            }
+
+            $Resultado = true;
+            if ($Digito1 != $digitosCPF[9]) {
+                $Resultado = false;
+            } else {
+                for ($i=0; $i < $digitosCPF[10]; $i++) { 
+                    $ValorPraSoma = $digitosCPF[$i] * (11 - $i);
+                    $Soma2 += $ValorPraSoma;
+                }
+
+                $Resto2 = $Soma2 % 11;
+                $Digito2 = 11 - $Resto2;
+                if ($Digito2 >= 10) {
+                    $Digito2 = 0;
+                }
+
+                if ($Digito2 != $digitosCPF[10]) {
+                    $Resultado = false;
+                } else {
+                    $Resultado = true;
+                }
+            }
+            
+
+            if ($Resultado === true) {
+                $Resultado = "verdadeiro";
+            } else {
+                $Resultado = "falso";
+            }
         
-        echo "<div class=\"container\"><p> o seu CPF é" . $Resultado .".</p></div>";
-        // as \\ para n considerar as "" como do código do php, mas parte do texto.
-?>
-</main>
+            echo "<div class=\"containerResultado\"><h2>" . $nome . ", o seu CPF é " . $Resultado .".</h2></div>";
+            // as \\ para n considerar as "" como do código do php, mas parte do texto.
+        echo  "<a href=\"forms.html\" class=\"btn\">Refazer</a>";
+        ?>
+    </main>
  </body>
  </html>
 
