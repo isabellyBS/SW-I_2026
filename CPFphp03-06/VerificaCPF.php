@@ -15,6 +15,8 @@
             $nome = $_POST["nome"];
             $cpf = $_POST["CPF"];
             $CPF = preg_replace("/[^0-9]/", "", $cpf); // deixa só os nº
+            $Soma=0;
+            $Soma2=0;
 
             $digitosCPF = str_split($CPF); // separa os números do CPF em um array
 
