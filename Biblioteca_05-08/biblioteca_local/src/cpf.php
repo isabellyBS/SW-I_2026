@@ -5,11 +5,11 @@
             if (strlen($cpf) != 11) {
                 return false;
             }
-            for ($i = 0; $i < 10; $i++) {
-                if ($cpf === str_repeat($i, 11)) {
-                    return false;
-                }
-            }
+            // for ($i = 0; $i < 10; $i++) {
+            //     if ($cpf === str_repeat($i, 11)) {
+            //         return false;
+            //     }
+            //}
             $dv1 = 0;
             for ($i = 0; $i < 9; $i++) {
                 $dv1 += intval($cpf[$i]) * (10 - $i);

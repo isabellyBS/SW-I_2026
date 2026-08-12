@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms CPF e IMC</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <form action="index.php" method="post">
+            <h3>Verificar CPF</h3> <br>
+            <p>CPF: </p>
+            <div class="caixa">
+                <input type="text" name="CPF" placeholder="123.456.789-10" minlength="11">
+            </div>
+            <br><br>
+
+            <h3>Calcular IMC</h3><br>
+            <p>Peso (em KG)</p>
+            <div class="caixa">
+                <input type="number" name="peso">
+            </div>
+            <p>Altura (em metros)</p>
+            <div class="caixa">
+                <input type="number" name="altura">
+            </div>
+
+            <div>
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
