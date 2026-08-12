@@ -14,8 +14,8 @@
             $verifica = new VerificaCPF();
             $contar = new calcImc(); 
 
-            echo $verifica->verificar($_POST["CPF"]) ? "Seu CPF é válido" : "Seu CPF é inválido";
-            echo "<br><br>";
+            echo $verifica->verificar($_POST["CPF"]) ? "<h3>CPF Válido</h3>" : "<h3>CPF Inválido</h3>";
+            echo "<br><hr><br>";
             echo $contar->calcular($_POST["peso"], $_POST["altura"]);
         ?>
     </div>
